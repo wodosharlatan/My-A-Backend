@@ -19,11 +19,6 @@ app.use(cors());
 // Parse JSON
 app.use(bodyParser.json());
 
-mongoose
-		.connect(process.env.DB_CONNECTION)
-		.then(() => console.log("Connected to MongoDB!"))
-		.catch((error) => console.error("Error connecting to MongoDB", error));
-
 app.get("/", (req, res) => {
 	res.send("Hello World!");
 });
@@ -32,3 +27,7 @@ app.listen(PORT, HOST, () => {
 		console.log(`Server is running on http://${HOST}:${PORT}`);
 });
 
+mongoose
+		.connect(process.env.DB_CONNECTION)
+		.then(() => console.log("Connected to MongoDB!"))
+		.catch((error) => console.error("Error connecting to MongoDB", error));
