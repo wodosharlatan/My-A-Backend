@@ -24,6 +24,10 @@ app.post("/", (req, res) => {
 
 });
 
+app.get("/", (req,res) => {
+	res.json({message: "Hello World! "});
+})
+
 app.listen(PORT, HOST, () => {
 		console.log(`Server is running on http://${HOST}:${PORT}`);
 });
