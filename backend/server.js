@@ -20,7 +20,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-	res.send("Hello World!");
+	res.json({ message: "Hello World!" });
+	
 });
 
 app.listen(PORT, HOST, () => {
