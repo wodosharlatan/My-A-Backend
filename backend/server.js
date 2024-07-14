@@ -19,9 +19,9 @@ app.use(cors());
 // Parse JSON
 app.use(bodyParser.json());
 
-app.get("/", (req, res) => {
+app.post("/", (req, res) => {
 	res.json({ message: "Hello World!" });
-	
+
 });
 
 app.listen(PORT, HOST, () => {
